@@ -34,6 +34,19 @@ from scipy.special import logsumexp
 
 
 
+class DataSet(torch.utils.data.Dataset):
+    """ pytorch Dataset that return image index too"""
+    def __init__(self, dt):
+        self.dt = dt
+
+    def __getitem__(self, index):
+        data, target = self.dt[index]
+        return data, target, index
+
+    def __len__(self):
+        return len(self.dt)
+
+
 def get_aug_dataloader(image_dir, is_validation=False,                           
                        batch_size=256, image_size=256, crop_size=224,          
                        mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225],  
