@@ -1,3 +1,12 @@
+
+
+'''
+This code is a data loader of imaging data. It first crops the input image (of any size) into one or multiple crops with chosen sizes. It then applies proboabilistic data augmentations on these crops
+data augmentations are: 1- Random Horizantal Filp with p=0.5. 2- Color Jitter 3- Grayscale Conversion with p=0.2  4- Gussial Blureing p=0.5  5- Normalization  
+'''
+
+
+
 import argparse
 import warnings
 import os
