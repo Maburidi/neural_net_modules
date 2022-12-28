@@ -1,6 +1,6 @@
 # neural_net_modules
 
-1- Data loader <b>
-2- Model <b>
-3- Optimizer <b>
-4-  <b>
+1- Data loader <br>
+2- Model <br>
+3- Optimizer <br>
+4-   <br>
