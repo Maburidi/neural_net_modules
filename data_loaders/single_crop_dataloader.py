@@ -74,7 +74,7 @@ def return_model_loader(args, return_loader=True):
                                       batch_size=args.batch_size,
                                       num_workers=args.workers,
                                       augs=int(args.augs))
-    return model, train_loader
+    return  train_loader
 
 
 
