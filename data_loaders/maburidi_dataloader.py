@@ -55,10 +55,10 @@ class cifar_10_data(datasets.ImageFolder):
         self.test_transform = torchvision.transforms.Compose(self.test_transform)
    
     def __getitem__(self, index):
-        path, _ = self.samples[index]
+        path, label = self.samples[index]
         image = self.loader(path)
 
-        return self.train_transform(image), self.train_transform(image), index
+        return self.train_transform(image), self.train_transform(image), index, label
 
 
 class GaussianBlur:
